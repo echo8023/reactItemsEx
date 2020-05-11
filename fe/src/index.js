@@ -4,11 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import {BrowserRouter as Router} from 'react-router-dom' //路由模式有两个，可任意选择其中一个。然后在render中将APP组件包裹起来就可以了。
+
+import '@/actions/api/intercepter.js'
+
+import {Provider} from 'react-redux'
+import store from '@/store'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
+  ,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

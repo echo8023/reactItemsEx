@@ -1,0 +1,18 @@
+.logoImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoImg img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+a{
+    color: rgb(213, 215, 218);
+}
+
+a:hover{
+    color:white;
+}
